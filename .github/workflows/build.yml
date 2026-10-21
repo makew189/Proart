@@ -1,20 +1,17 @@
 name: Build Art Studio APK
 
-on:
+"on":
 workflow_dispatch:
 push:
 branches:
 - main
-
-permissions:
-contents: read
 
 jobs:
 build:
 runs-on: ubuntu-latest
 
 steps:
-  - name: Checkout project
+  - name: Checkout repository
     uses: actions/checkout@v4
 
   - name: Set up Java
