@@ -14,7 +14,7 @@ build:
 runs-on: ubuntu-latest
 
 steps:
-  - name: Checkout repository
+  - name: Checkout project
     uses: actions/checkout@v4
 
   - name: Set up Java
@@ -31,7 +31,7 @@ steps:
   - name: Set up Android SDK
     uses: android-actions/setup-android@v3
 
-  - name: Build debug APK
+  - name: Build APK
     run: gradle assembleDebug
 
   - name: Upload APK
